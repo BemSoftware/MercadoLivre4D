@@ -1,0 +1,70 @@
+package Mercadolivre4D;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  dbrtl,
+  bindengine,
+  FireDAC,
+  FireDACCommonDriver,
+  FireDACCommon,
+  bindcomp;
+
+contains
+  MercadoLivre4D.Model.Attributes in 'src\model\MercadoLivre4D.Model.Attributes.pas',
+  MercadoLivre4D.Model.OAuth2 in 'src\model\MercadoLivre4D.Model.OAuth2.pas',
+  Mercadolivre4D in 'src\Mercadolivre4D.pas',
+  Mercadolivre4D.Maps in 'src\utils\Mercadolivre4D.Maps.pas',
+  Mercadolivre4D.Configuration in 'src\core\Mercadolivre4D.Configuration.pas',
+  Mercadolivre4D.OAuth.Interfaces in 'src\core\auth\Mercadolivre4D.OAuth.Interfaces.pas',
+  Mercadolivre4D.Types in 'src\core\resources\Mercadolivre4D.Types.pas',
+  Mercadolivre4D.Interfaces in 'src\core\Mercadolivre4D.Interfaces.pas',
+  Mercadolivre4D.OAuth.RestClient in 'src\core\auth\Mercadolivre4D.OAuth.RestClient.pas',
+  Mercadolivre4D.Resources.Interfaces in 'src\core\resources\Mercadolivre4D.Resources.Interfaces.pas',
+  Mercadolivre4D.Resources.Filters in 'src\core\resources\Mercadolivre4D.Resources.Filters.pas',
+  Mercadolivre4D.OAuth.MeliApi in 'src\core\auth\Mercadolivre4D.OAuth.MeliApi.pas',
+  Mercadolivre4D.Resources in 'src\core\resources\Mercadolivre4D.Resources.pas',
+  Mercadolivre4D.Resources.QueryParams in 'src\core\resources\Mercadolivre4D.Resources.QueryParams.pas',
+  Mercadolivre4D.Resources.SegmentParams in 'src\core\resources\Mercadolivre4D.Resources.SegmentParams.pas',
+  Mercadolivre4D.DTO.Entity in 'src\dto\Mercadolivre4D.DTO.Entity.pas',
+  Mercadolivre4D.Cache in 'src\utils\Mercadolivre4D.Cache.pas',
+  Mercadolivre4D.RttiHelpers in 'src\utils\Mercadolivre4D.RttiHelpers.pas',
+  Mercadolivre4D.RttiUtils in 'src\utils\Mercadolivre4D.RttiUtils.pas',
+  Pkg.Json.DTO in 'src\utils\Pkg.Json.DTO.pas',
+  Mercadolivre4D.Resources.Services in 'src\core\resources\Mercadolivre4D.Resources.Services.pas',
+  MercadoLivre4D.Model.Pictures in 'src\model\MercadoLivre4D.Model.Pictures.pas',
+  MercadoLivre4D.Model.SaleTerms in 'src\model\MercadoLivre4D.Model.SaleTerms.pas',
+  Mercadolivre4D.DTO.Interfaces in 'src\dto\Mercadolivre4D.DTO.Interfaces.pas',
+  Mercadolivre4D.DTO.ItemDTO in 'src\dto\Mercadolivre4D.DTO.ItemDTO.pas',
+  Mercadolivre4D.DTO.AttributesDTO in 'src\dto\Mercadolivre4D.DTO.AttributesDTO.pas',
+  Mercadolivre4D.DTO.PicturesDTO in 'src\dto\Mercadolivre4D.DTO.PicturesDTO.pas',
+  Mercadolivre4D.DTO.SaleTermsDTO in 'src\dto\Mercadolivre4D.DTO.SaleTermsDTO.pas',
+  MercadoLivre4D.Model.Item in 'src\model\MercadoLivre4D.Model.Item.pas';
+
+end.

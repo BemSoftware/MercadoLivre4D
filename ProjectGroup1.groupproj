@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{7765CF14-6A86-4419-A692-8BE6A8E731EA}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Mercadolivre4D.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="examples\vcl\Project1.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Mercadolivre4D">
+        <MSBuild Projects="Mercadolivre4D.dproj"/>
+    </Target>
+    <Target Name="Mercadolivre4D:Clean">
+        <MSBuild Projects="Mercadolivre4D.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Mercadolivre4D:Make">
+        <MSBuild Projects="Mercadolivre4D.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project1">
+        <MSBuild Projects="examples\vcl\Project1.dproj"/>
+    </Target>
+    <Target Name="Project1:Clean">
+        <MSBuild Projects="examples\vcl\Project1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project1:Make">
+        <MSBuild Projects="examples\vcl\Project1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Mercadolivre4D;Project1"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Mercadolivre4D:Clean;Project1:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Mercadolivre4D:Make;Project1:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
